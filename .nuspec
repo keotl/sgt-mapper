@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>sgtmapper</id>
+        <version>0.0.1</version>
+        <description>Sergeant Mapper's Lonely Exceptions Band</description>
+        <authors>Kento A. Lauzon</authors>
+        <license type="expression">MIT</license>
+    </metadata>
+</package>
