@@ -16,7 +16,13 @@ namespace SgtMapper {
         await _next(context);
       } catch (Exception e) {
         var mappedResponse = SgtMapper.MapException(e);
-        JsonConvert.SerializeObject(mappedResponse);
+
+        try {
+          var serialized = JsonConvert.SerializeObject(mappedResponse);
+          await context.Response.WriteAsync(serialized);
+        } catch {
+          await context.Response.WriteAsync(mappedResponse.ToString());
+        }
       }
     }
   }
