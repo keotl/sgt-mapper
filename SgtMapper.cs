@@ -16,8 +16,8 @@ namespace SgtMapper {
           .GetAssemblies()
           .SelectMany(assembly => assembly.GetTypes())
           .Where(t => t.GetCustomAttributes(typeof(ExceptionMapperAttribute), true).Length > 0)
-          .Where(t => t.IsGenericType)
-          .ToDictionary(t => t.GetGenericArguments()[0], t => t);
+          .Where(t => t.GetInterfaces()[0].GetGenericArguments().Length > 0) // TODO use correct interface, not necessarily first one
+          .ToDictionary(t => t.GetInterfaces()[0].GetGenericArguments()[0], t => t);
 
       app.UseMiddleware<ExceptionMiddleware>();
     }
@@ -38,8 +38,7 @@ namespace SgtMapper {
       }
 
       var methodInfo = mapperType.GetMethod("Map");
-      var genericMethod = methodInfo.MakeGenericMethod(e.GetType());
-      return genericMethod.Invoke(mapper, new[] { e });
+      return methodInfo.Invoke(mapper, new[]{e});
     }
   }
 }
