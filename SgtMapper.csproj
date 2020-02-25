@@ -5,7 +5,7 @@
     <RootNamespace>SgtMapper</RootNamespace>
     <PackageId>SgtMapper</PackageId>
     <PackageDescription>Sergeant Mapper's Lonely Exceptions Band</PackageDescription>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Authors>Kento A. Lauzon</Authors>
     <Company>ligature.ca</Company>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
