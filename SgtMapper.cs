@@ -30,7 +30,7 @@ namespace SgtMapper {
       if (!exceptionMappers.TryGetValue(e.GetType(), out var mapperType)) {
         if (!silent) {
           logger.LogInformation($"SgtMapper: Could not find an exception mapper for '${e.GetType()}'. " +
-                                "If this is not intended, make sure that your exception types are properly annotated. " +
+                                "If this is not intended, make sure that your exception mapper types are properly annotated. " +
                                 "To suppress this message, configure SgtMapper using 'WithSgtMapper(true)'.");
         }
         throw e;
