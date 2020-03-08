@@ -35,7 +35,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 None! SgtMapper is designed to be as simple to use as possible. There is nothing
 more to configure than what is described in this README. Exception mappers will
 be automatically detected in your project, and will be instantiated directly, or
-using ASP.NET's dependency injection mechanism, should it require constructor
+using ASP.NET's dependency injection mechanism, should they require constructor
 parameters.
 
 ## Running the tests
