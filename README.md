@@ -37,3 +37,11 @@ more to configure than what is described in this README. Exception mappers will
 be automatically detected in your project, and will be instantiated directly, or
 using ASP.NET's dependency injection mechanism, should it require constructor
 parameters.
+
+## Running the tests
+Sgt. Mapper has an [Anachronos](https://pypi.org/project/anachronos/) testing suite which can be found in the `e2e_tests` directory. Running the tests requires python3.6 or later. 
+
+```bash
+pip install -r e2e_tests/requirements.txt
+sh run_tests.sh
+```
