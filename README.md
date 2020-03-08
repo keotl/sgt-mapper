@@ -7,7 +7,7 @@ catches uncaught exceptions and maps it to a response using one of the user-defi
 exception mappers.
 
 ## How to use it
-1. Add the nuget package
+1. Add the nuget package.
 ```bash
 dotnet app package SgtMapper
 ```
@@ -21,7 +21,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     }
 ```
 
-3. Define custom exception mappers
+3. Define custom exception mappers.
 ```csharp
 [ExceptionMapper]
   public class MyExceptionMapper : ExceptionMapper<MyException> {
