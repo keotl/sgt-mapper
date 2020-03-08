@@ -16,6 +16,11 @@
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <None Include="LICENSE.md" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+    <Content Remove="e2e_tests\**\*" />
+    <Compile Remove="e2e_tests\**\*" />
+    <EmbeddedResource Remove="e2e_tests\**\*" />
+    <None Remove="e2e_tests\**\*" />
+    
   </ItemGroup>
 
 </Project>
